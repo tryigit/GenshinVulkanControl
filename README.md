@@ -12,6 +12,6 @@ Enabling and disabling Vulkan in Genshin Impact.
 > [!IMPORTANT]
 > Run it with root permission (su).
 
-### Best Performance 🚀
+### 🚀 Best Performance
 > [!TIP]
 > You can use GPU Driver and if you have an old device you can use MIUI Performance Saver
