@@ -1,0 +1,6 @@
+id=vulkan_genshin
+name=Genshin Vulkan Enable
+version=v1.0.0
+versionCode=100
+author=tryigitx
+description=Enables the experimental vulkan feature by modifying the game file.
