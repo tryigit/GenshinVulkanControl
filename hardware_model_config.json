@@ -1,0 +1,92 @@
+{
+  "configs": [
+    {
+      "hardwareModel": "Xiaomi MI 9",
+      "littleCoreCount": 4,
+      "bigCoreCount": 4,
+      "littleCoreMask": 15,
+      "bigCoreMask": 240,
+      "vulkanFlag": 0
+    },
+    {
+      "hardwareModel": "Xiaomi MI 8",
+      "littleCoreCount": 4,
+      "bigCoreCount": 4,
+      "littleCoreMask": 15,
+      "bigCoreMask": 240,
+      "vulkanFlag": 0
+    },
+    {
+      "hardwareModel": "blackshark DLT-A0",
+      "littleCoreCount": 4,
+      "bigCoreCount": 4,
+      "littleCoreMask": 15,
+      "bigCoreMask": 240,
+      "vulkanFlag": 0
+    },
+    {
+      "hardwareModel": "asus ASUS_I001DA",
+      "littleCoreCount": 4,
+      "bigCoreCount": 4,
+      "littleCoreMask": 15,
+      "bigCoreMask": 240,
+      "vulkanFlag": 0
+    },
+    {
+      "hardwareModel": "samsung SM-G9730",
+      "littleCoreCount": 4,
+      "bigCoreCount": 4,
+      "littleCoreMask": 15,
+      "bigCoreMask": 240,
+      "vulkanFlag": 0
+    },
+    {
+      "hardwareModel": "samsung SM-N975F",
+      "littleCoreCount": 4,
+      "bigCoreCount": 4,
+      "littleCoreMask": 15,
+      "bigCoreMask": 240,
+      "vulkanFlag": 0
+    },
+    {
+      "hardwareModel": "HUAWEI EVR-AN00",
+      "littleCoreCount": 4,
+      "bigCoreCount": 4,
+      "littleCoreMask": 15,
+      "bigCoreMask": 240,
+      "vulkanFlag": 0
+    },
+    {
+      "hardwareModel": "Xiaomi Redmi K20",
+      "littleCoreCount": 6,
+      "bigCoreCount": 2,
+      "littleCoreMask": 63,
+      "bigCoreMask": 192,
+      "vulkanFlag": 0
+    },
+    {
+      "hardwareModel": "HUAWEI VOG-AL00",
+      "littleCoreCount": 4,
+      "bigCoreCount": 4,
+      "littleCoreMask": 15,
+      "bigCoreMask": 240,
+      "vulkanFlag": 0
+    },
+    {
+      "hardwareModel": "samsung SM-G9750",
+      "littleCoreCount": 4,
+      "bigCoreCount": 4,
+      "littleCoreMask": 15,
+      "bigCoreMask": 240,
+      "vulkanFlag": 0
+    },
+    {
+      "hardwareModel": "samsung SM-G9810",
+      "littleCoreCount": 4,
+      "bigCoreCount": 4,
+      "littleCoreMask": 15,
+      "bigCoreMask": 240,
+      "vulkanFlag": 0
+    }
+  ]
+}
