@@ -1,4 +1,5 @@
-# Disable vulkan json by tryigitx
+# Disable vulkan json by @tryigitx
+
 # Get device
 brand=$(getprop ro.product.brand)
 model=$(getprop ro.product.model)
