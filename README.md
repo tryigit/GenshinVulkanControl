@@ -1,5 +1,5 @@
 # Genshin Vulkan Control
-Enabling and disabling Vulkan in Genshin Impact.
+With the Magisk module and .sh script you can enable Genshin Vulkan for your device. Most other modules work incorrectly and do not save the device model number. Necessary tests have been done to make sure this module works.
 
 ## If You Are Using Module
 > [!IMPORTANT]
