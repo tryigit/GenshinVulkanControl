@@ -2,13 +2,10 @@
 With the Magisk module and .sh script you can enable Genshin Vulkan for your device. Most other modules work incorrectly and do not save the device model number. Necessary tests have been done to make sure this module works.
 
 ## If You Are Using Module
-> [!IMPORTANT]
-> After uninstalling the module vulkan will be disabled automatically.
+After uninstalling the module vulkan will be disabled automatically.
 
 ## If You Are Not Using Module
-> [!TIP]
-> You can use MT Manager (bin.mt.plus) to run the .sh
-
+You can use MT Manager (bin.mt.plus) to run the .sh
 > [!IMPORTANT]
 > Run it with root permission (su).
 
