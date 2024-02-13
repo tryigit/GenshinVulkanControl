@@ -14,4 +14,4 @@ You can use MT Manager (bin.mt.plus) to run the .sh
 > You can use GPU Driver and if you have an old device you can use MIUI Performance Saver
 
 ## Telegram
-t.me/chinacloudgroup
+https://t.me/chinacloudgroup
