@@ -1,5 +1,5 @@
 # Genshin Vulkan Control
-With the Magisk module and .sh script you can enable Genshin Vulkan for your device. Most other modules work incorrectly and do not save the device model number. Necessary tests have been done to make sure this module works.
+With the Magisk module **or** .sh script you can enable Genshin Vulkan for your device. Most other modules work incorrectly and do not save the device model number. Necessary tests have been done to make sure this module works.
 
 ## If You Are Using Module
 After uninstalling the module vulkan will be disabled automatically.
