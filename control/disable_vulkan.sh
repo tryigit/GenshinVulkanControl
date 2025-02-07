@@ -1,50 +1,28 @@
-#!/bin/bash
+# @cleverestech
 
-# Get device
-brand=$(getprop ro.product.brand)
-model=$(getprop ro.product.model)
+nohup am start -a android.intent.action.VIEW -d https://t.me/cleverestech >/dev/null 2>&1 &
 
-# Set variables for app packages
 YS_PACKAGE="com.miHoYo.Yuanshen"
 YS_PACKAGE2="com.miHoYo.ys"
 GI_PACKAGE="com.miHoYo.GenshinImpact"
 
-# Function to enable Vulkan @tryigitx
-enable_vulkan() {
+# Github req
+generate_gpu_config() {
+  local target_dir="/storage/emulated/0/Android/data/$1/files"
+  local output_file="$target_dir/vulkan_gpu_list_config.txt"
 
-  local json="/storage/emulated/0/Android/data/$1/files/hardware_model_config.json"
+  mkdir -p "$target_dir"
+  chmod 755 "$target_dir"
   
-  if [ -f "$json" ]; then
-  
-    chmod 644 "$json"
-    
-# Set vulkanFlag based on device model @tryigitx
-
-    # Delete existing configs
-    > "$json"
-    
-    # Add new entry
-    echo "{" >> "$json"
-    echo "  \"configs\": [" >> "$json"
-    echo "    {" >> "$json"
-    echo "      \"hardwareModel\": \"$brand $model\"," >> "$json" 
-    echo "      \"vulkanFlag\": 0" >> "$json"
-    echo "    }" >> "$json"
-    echo "  ]" >> "$json"
-    echo "}" >> "$json"
-    
-    chmod 440 "$json"
-  
-  fi
+  su -c dumpsys SurfaceFlinger | grep OpenGL | cut -d',' -f2 | xargs > "$output_file"
 
 }
 
-# Wait for Android data 
 until [ -d "/sdcard/Android" ]; do
   sleep 1 
 done
 
-# Enable Vulkan
-enable_vulkan "$YS_PACKAGE"
-enable_vulkan "$YS_PACKAGE2"
-enable_vulkan "$GI_PACKAGE"
+for package in $YS_PACKAGE $YS_PACKAGE2 $GI_PACKAGE; do
+  generate_gpu_config "$package"
+done
+echo "Vulkan enabled."
