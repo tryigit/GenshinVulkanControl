@@ -1,6 +1,6 @@
 {
-    "version": "v1.2.0",
-    "versionCode": 120,
-    "zipUrl": "https://github.com/tryigit/GenshinVulkanControl/releases/download/V1.2.0/Module_GenshinVulkan.zip",
+    "version": "v1.3.0",
+    "versionCode": 130,
+    "zipUrl": "https://github.com/tryigit/GenshinVulkanControl/releases/download/V1.3.0/Module_GenshinVulkan.zip",
     "changelog": "https://raw.githubusercontent.com/tryigit/GenshinVulkanControl/refs/heads/main/changelog.md"
 }
