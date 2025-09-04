@@ -10,12 +10,27 @@ GI_PACKAGE="com.miHoYo.GenshinImpact"
 generate_gpu_config() {
   local target_dir="/storage/emulated/0/Android/data/$1/files"
   local output_file="$target_dir/vulkan_gpu_list_config.txt"
+  local output_file_engine="$target_dir/vulkan_gpu_list_config_engine.txt"
 
   mkdir -p "$target_dir"
   chmod 755 "$target_dir"
   
-  su -c dumpsys SurfaceFlinger | grep OpenGL | cut -d',' -f2 | xargs > "$output_file"
+  local gpu_info=$(su -c dumpsys SurfaceFlinger | grep OpenGL | cut -d',' -f2 | xargs)
+  
+  echo "$gpu_info" > "$output_file"
+  echo "$gpu_info" > "$output_file_engine"
+}
 
+disable_vulkan() {
+  local target_dir="/storage/emulated/0/Android/data/$1/files"
+  local output_file="$target_dir/vulkan_gpu_list_config.txt"
+  local output_file_engine="$target_dir/vulkan_gpu_list_config_engine.txt"
+
+  mkdir -p "$target_dir"
+  chmod 755 "$target_dir"
+  
+  > "$output_file"
+  > "$output_file_engine"
 }
 
 until [ -d "/sdcard/Android" ]; do
@@ -23,6 +38,6 @@ until [ -d "/sdcard/Android" ]; do
 done
 
 for package in $YS_PACKAGE $YS_PACKAGE2 $GI_PACKAGE; do
-  generate_gpu_config "$package"
+  disable_vulkan "$package"
 done
-echo "Vulkan enabled."
+echo "Vulkan disabled."
