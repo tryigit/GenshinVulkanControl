@@ -10,12 +10,16 @@ GI_PACKAGE="com.miHoYo.GenshinImpact"
 generate_gpu_config() {
   local target_dir="/storage/emulated/0/Android/data/$1/files"
   local output_file="$target_dir/vulkan_gpu_list_config.txt"
+  #new file
+  local output_file_engine="$target_dir/vulkan_gpu_list_config_engine.txt"
 
   mkdir -p "$target_dir"
   chmod 755 "$target_dir"
   
-  su -c dumpsys SurfaceFlinger | grep OpenGL | cut -d',' -f2 | xargs > "$output_file"
-
+  local gpu_info=$(su -c dumpsys SurfaceFlinger | grep OpenGL | cut -d',' -f2 | xargs)
+  
+  echo "$gpu_info" > "$output_file"
+  echo "$gpu_info" > "$output_file_engine"
 }
 
 until [ -d "/sdcard/Android" ]; do
